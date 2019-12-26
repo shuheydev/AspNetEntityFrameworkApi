@@ -1,0 +1,38 @@
+@host=http://localhost:5000/api
+
+
+###
+POST {{host}}/authors
+Content-Type: application/json
+
+{
+    "FirstName":"Foo",
+    "LastName":"Bar",
+    "Nationality":"Al"
+}
+
+###
+POST {{host}}/authors
+Content-Type: application/json
+
+{
+    "FirstName":"John",
+    "LastName":"Doe",
+    "Nationality":"US"
+}
+
+###
+POST {{host}}/books
+Content-Type: application/json
+
+{
+    "title":"my quest2",
+    "publishDate":"2019-11-01T00:00:00",
+    "authorid":1
+}
+
+###
+GET {{host}}/authors
+
+###
+ get {{host}}/books
